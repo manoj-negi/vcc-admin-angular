@@ -21,14 +21,14 @@ export class Students {
       this.username = students.username || '';
       this.api_key = students.api_key || '';
       this.client_id = students.client_id || '';
-      this.role_id = students.role_id || 0;
-      this.country_code = students.country_code || 0;
+      this.role_id = students.role_id;
+      this.country_code = students.country_code;
       this.mobile = students.mobile || '';
       this.email = students.email || '';
       this.password = students.password || '';
       this.validation_token = students.validation_token || '';
       this.referral_code = students.referral_code || '';
-      this.product_id = students.product_id || 0;
+      this.product_id = students.product_id;
       this.total_invitees = students.total_invitees || 0;
       this.successfull_referral = students.successfull_referral || 0;
       this.is_active = students.is_active || 1;

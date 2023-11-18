@@ -48,9 +48,9 @@ export class AllStudentsComponent
   students?: Students;
   breadscrums = [
     {
-      title: 'All Student',
-      items: ['Student'],
-      active: 'All Student',
+      title: 'All Users',
+      items: ['Users'],
+      active: 'All Users',
     },
   ];
   constructor(
