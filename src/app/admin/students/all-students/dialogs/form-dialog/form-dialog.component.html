@@ -1,0 +1,229 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <!-- <img [src]='students.img' alt="avatar"> -->
+        <div class="modal-about">
+          {{dialogTitle}}
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" class="modal-close-button" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="stdForm" (ngSubmit)="submit">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>perm_identity</i>
+            <mat-error *ngIf="stdForm.get('username')?.hasError('required')">
+             Username is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Apikey</mat-label>
+            <input matInput formControlName="api_key" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>list</i>
+            <mat-error *ngIf="stdForm.get('api_key')?.hasError('required')">
+              api_key is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>password</mat-label>
+            <input matInput formControlName="password" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>visibility</i>
+            <mat-error *ngIf="stdForm.get('password')?.hasError('required')">
+              password is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>client_id</mat-label>
+            <input matInput formControlName="client_id" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>web</i>
+            <mat-error *ngIf="stdForm.get('client_id')?.hasError('required')">
+              client_id is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>role_id</mat-label>
+            <input matInput formControlName="role_id"  type="number" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>sort</i>
+            <mat-error *ngIf="stdForm.get('role_id')?.hasError('required')">
+              role_id is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>country_code</mat-label>
+            <input matInput formControlName="country_code" type="number" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>language</i>
+            <mat-error *ngIf="stdForm.get('country_code')?.hasError('required')">
+              country_id is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Mobile</mat-label>
+            <input matInput formControlName="mobile" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>phone</i>
+            <mat-error *ngIf="stdForm.get('mobile')?.hasError('required')">
+              Mobile is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>email</i>
+            <mat-error *ngIf="stdForm.get('email')?.hasError('required') || stdForm.get('email')?.touched">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>referral_code</mat-label>
+            <input matInput formControlName="referral_code">
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>sort</i>
+            <mat-error *ngIf="stdForm.get('referral_code')?.hasError('required')">
+              referral_code is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>validation_token</mat-label>
+            <input matInput formControlName="validation_token" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>sort</i>
+            <mat-error *ngIf="stdForm.get('validation_token')?.hasError('required')">
+              validation_token is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>product_id</mat-label>
+            <input matInput formControlName="product_id" type="number" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>sort</i>
+            <mat-error *ngIf="stdForm.get('product_id')?.hasError('required')">
+              product_id is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+      <div class="row">
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Select Department</mat-label>
+            <mat-select formControlName="department" required>
+              <mat-option [value]="'mechanical'">
+                Mechanical
+              </mat-option>
+              <mat-option [value]="'science'">
+                Science
+              </mat-option>
+              <mat-option [value]="'mathematics'">
+                Mathematics
+              </mat-option>
+              <mat-option [value]="'computer'">
+                Computer
+              </mat-option>
+              <mat-option [value]="'civil'">
+                Civil
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="stdForm.get('department')?.hasError('required')">
+              Select Any Department
+            </mat-error>
+          </mat-form-field>
+        </div> -->
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender" required>
+              <mat-option [value]="'male'">
+                Male
+              </mat-option>
+              <mat-option [value]="'female'">
+                Female
+              </mat-option>
+              <mat-option [value]="'other'">
+                Other
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="stdForm.get('gender')?.hasError('required')">
+              Gender is required
+            </mat-error>
+          </mat-form-field>
+        </div> -->
+      </div>
+      <div class="row">
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Mobile</mat-label>
+            <input matInput formControlName="mobile" type="number">
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>phone</i>
+            <mat-error *ngIf="stdForm.get('mobile')?.hasError('required')">
+              Mobile is required
+            </mat-error>
+          </mat-form-field>
+        </div> -->
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            <i class="material-icons-two-tone color-icon p-3" matSuffix>email</i>
+            <mat-error *ngIf="stdForm.get('email')?.hasError('required') || stdForm.get('email')?.touched">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+        </div> -->
+      </div>
+      <div class="row">
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Joining date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="stdForm.get('date')?.hasError('required')">
+              Please select date
+            </mat-error>
+          </mat-form-field>
+        </div> -->
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" [disabled]="!stdForm.valid" [mat-dialog-close]="1"
+              (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
