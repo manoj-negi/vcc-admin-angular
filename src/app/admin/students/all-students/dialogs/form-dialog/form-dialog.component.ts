@@ -80,7 +80,18 @@ export class FormDialogComponent {
   onNoClick(): void {
     this.dialogRef.close();
   }
+  // public confirmAdd(): void {
+  //   this.studentsService.updateStudents(this.stdForm.getRawValue());
+  // }
+
   public confirmAdd(): void {
-    this.studentsService.updateStudents(this.stdForm.getRawValue());
+    const formData = this.stdForm.getRawValue();
+  
+    if (this.dialogTitle === 'New Students') {
+      this.studentsService.addStudents(this.stdForm.getRawValue());
+    } else {
+      this.studentsService.updateStudents(this.stdForm.getRawValue());
+    }
   }
+  
 }
