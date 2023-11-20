@@ -8,7 +8,9 @@ import {
   UntypedFormBuilder,
 } from '@angular/forms';
 import { Students } from '../../students.model';
-import { formatDate } from '@angular/common';
+import { RoleService } from './form-dialog.service';
+import { Roles,Countries,Products } from './form-dialog.model';
+import { HttpErrorResponse } from '@angular/common/http';
 
 export interface DialogData {
   id: number;
@@ -26,13 +28,19 @@ export class FormDialogComponent {
   dialogTitle: string;
   stdForm: UntypedFormGroup;
   students: Students;
+  roles: Roles[] = [];
+  countries: Countries[] = [];
+  products: Products[] = [];
   constructor(
     public dialogRef: MatDialogRef<FormDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
     public studentsService: StudentsService,
+    public rolesService: RoleService,
     private fb: UntypedFormBuilder
   ) {
-    // Set the defaults
+    this.countries = [];
+    this.roles = [];
+    this.products = [];
     this.action = data.action;
     if (this.action === 'edit') {
       this.dialogTitle = data.students.username;
@@ -44,6 +52,14 @@ export class FormDialogComponent {
     }
     this.stdForm = this.createContactForm();
   }
+
+  ngOnInit() {
+        // Fetch roles when the component is initialized
+        this.getRoles();
+        this.getCountries();
+        this.getProducts();
+      }
+
   formControl = new UntypedFormControl('', [
     Validators.required,
     // Validators.email,
@@ -55,6 +71,43 @@ export class FormDialogComponent {
       ? 'Not a valid email'
       : '';
   }
+
+  getRoles() {
+    this.rolesService.getRoles().subscribe(
+      (response: Roles[]) => {
+        console.log('API Response:', response);
+        this.roles = response;
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error fetching roles:', error);
+      }
+    );
+  }
+
+  getProducts() {
+    this.rolesService.getProducts().subscribe(
+      (response: Products[]) => {
+        console.log('API Response:', response);
+        this.products = response;
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error fetching products:', error);
+      }
+    );
+  }
+  
+  getCountries() {
+    this.rolesService.getCountries().subscribe(
+      (response: Countries[]) => {
+        console.log('API Response:', response);
+        this.countries = response;
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error fetching countries:', error);
+      }
+    );
+  }
+  
   createContactForm(): UntypedFormGroup {
     return this.fb.group({
       id: [this.students.id],
@@ -66,7 +119,7 @@ export class FormDialogComponent {
       ],
       password:[ this.students.password],
       referral_code:[ this.students.referral_code],
-      country_code:[this.students.country_code ],
+      country_code:[this.students.country_code],
       client_id: [this.students.client_id],
       mobile: [this.students.mobile],
       role_id: [this.students.role_id],
@@ -80,9 +133,6 @@ export class FormDialogComponent {
   onNoClick(): void {
     this.dialogRef.close();
   }
-  // public confirmAdd(): void {
-  //   this.studentsService.updateStudents(this.stdForm.getRawValue());
-  // }
 
   public confirmAdd(): void {
     const formData = this.stdForm.getRawValue();
