@@ -10,44 +10,42 @@
       "TEXT": "Dashboard",
       "LIST": {
         "DASHBOARD1": "Dashboard 1",
+        
         "DASHBOARD2": "Dashboard 2",
         "TEACHER-DASHBOARD": "Teacher Dashboard",
         "STUDENT-DASHBOARD": "Student Dashboard"
       }
     },
     "TEACHERS": {
-      "TEXT": "Teachers",
+      "TEXT": "Roles",
       "LIST": {
-        "ALL-TEACHERS": "All Teachers",
-        "ADD-TEACHER": "Add Teacher",
-        "EDIT-TEACHER": "Edit Teacher",
-        "ABOUT-TEACHER": "About Teacher"
+        "ALL-TEACHERS": "All Roles",
+        "ADD-TEACHER": "Add Roles"
+        
       }
     },
     "STUDENTS": {
-      "TEXT": "Students",
+      "TEXT": "Users",
       "LIST": {
-        "ALL-STUDENTS": "All Students",
-        "ADD-STUDENT": "Add Student",
-        "EDIT-STUDENT": "Edit Student",
-        "ABOUT-STUDENT": "About Student",
-        "STUDENT-ATTENDANCE": "Student Attendance"
+        "ALL-STUDENTS": "All Users",
+        "ADD-STUDENT": "Add Users"
+        
       }
     },
     "COURSES": {
-      "TEXT": "Courses",
+      "TEXT": "Countries",
       "LIST": {
-        "ALL-COURSES": "All Courses",
-        "ADD-COURSE": "Add Course",
+        "ALL-COURSES": "All Countries",
+        "ADD-COURSE": "Add Countries",
         "EDIT-COURSE": "Edit Course",
         "ABOUT-COURSE": "About Course"
       }
     },
     "LIBRARY": {
-      "TEXT": "Library",
+      "TEXT": "Products",
       "LIST": {
-        "ALL-LIBRARY": "All Library Assets",
-        "ADD-LIBRARY": "Add Library Asset",
+        "ALL-LIBRARY": "All Products",
+        "ADD-LIBRARY": "Add Products",
         "EDIT-LIBRARY": "Edit Library Asset"
       }
     },

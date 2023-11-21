@@ -14,9 +14,9 @@ export class AddTeacherComponent {
   proForm: UntypedFormGroup;
   breadscrums = [
     {
-      title: 'Add Teacher',
-      items: ['Teacher'],
-      active: 'Add Teacher',
+      title: 'Add Roles',
+      items: ['Roles'],
+      active: '',
     },
   ];
   constructor(private fb: UntypedFormBuilder) {

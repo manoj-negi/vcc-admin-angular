@@ -13,9 +13,9 @@ export class AddStudentComponent {
   stdForm: UntypedFormGroup;
   breadscrums = [
     {
-      title: 'Add Student',
-      items: ['Student'],
-      active: 'Add Student',
+      title: 'Add Users',
+      items: ['Users'],
+      active: '',
     },
   ];
   constructor(private fb: UntypedFormBuilder) {
