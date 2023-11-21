@@ -52,9 +52,9 @@ export class AllAssetsComponent
   library?: Library;
   breadscrums = [
     {
-      title: 'All Asset',
-      items: ['Library'],
-      active: 'All Asset',
+      title: 'All Products',
+      items: ['Products'],
+      active: '',
     },
   ];
   constructor(

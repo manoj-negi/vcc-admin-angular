@@ -14,9 +14,9 @@ export class AddAssetComponent {
   libraryForm: UntypedFormGroup;
   breadscrums = [
     {
-      title: 'Add Asset',
-      items: ['Library'],
-      active: 'Add Asset',
+      title: 'Add Products',
+      items: ['Products'],
+      active: '',
     },
   ];
   constructor(private fb: UntypedFormBuilder) {

@@ -1,6 +1,6 @@
 {
   "LOGIN": {
-    "TITLE": "Willkommen bei Smart"
+    "TITLE": ""
   },
   "MENUITEMS": {
     "MAIN": {
@@ -9,7 +9,7 @@
     "DASHBOARD": {
       "TEXT": "Dashboard",
       "LIST": {
-        "DASHBOARD1": "Dashboard 1",
+        // "DASHBOARD1": "Dashboard 1",
         "DASHBOARD2": "Dashboard 2",
         "TEACHER-DASHBOARD": "Lehrerin Dashboard",
         "STUDENT-DASHBOARD": "Studentin Dashboard"
@@ -28,10 +28,8 @@
       "TEXT": "Studentinnen",
       "LIST": {
         "ALL-STUDENTS": "Alle Schüler",
-        "ADD-STUDENT": "Schüler hinzufügen",
-        "EDIT-STUDENT": "Schüler bearbeiten",
-        "ABOUT-STUDENT": "Über Student",
-        "STUDENT-ATTENDANCE": "Student Attendance"
+        "ADD-STUDENT": "Schüler hinzufügen"
+        
       }
     },
     "COURSES": {

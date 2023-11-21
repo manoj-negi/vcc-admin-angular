@@ -41,11 +41,11 @@ const routes: Routes = [
       },
 
       // Extra components
-      {
-        path: 'calendar',
-        loadChildren: () =>
-          import('./calendar/calendar.module').then((m) => m.CalendarsModule),
-      },
+      // {
+      //   path: 'calendar',
+      //   loadChildren: () =>
+      //     import('./calendar/calendar.module').then((m) => m.CalendarsModule),
+      // },
       {
         path: 'task',
         loadChildren: () =>

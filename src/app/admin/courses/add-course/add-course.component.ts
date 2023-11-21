@@ -14,9 +14,9 @@ export class AddCourseComponent {
   courseForm: UntypedFormGroup;
   breadscrums = [
     {
-      title: 'Add Course',
-      items: ['Course'],
-      active: 'Add Course',
+      title: 'Add Countries',
+      items: ['Countries'],
+      active: '',
     },
   ];
   constructor(private fb: UntypedFormBuilder) {
