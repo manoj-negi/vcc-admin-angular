@@ -24,7 +24,7 @@
               <button mat-raised-button color="warn" type="button" (click)="studentSet();">Student</button>
             </div>
           </div> -->
-          <form class="validate-form" [formGroup]="authForm" (ngSubmit)="onSubmit()">
+          <form class="validate-form" [formGroup]="authForm" (ngSubmit)="onSubmit($event)">
             <div class="row">
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
                 <mat-form-field class="example-full-width" appearance="outline">
